@@ -180,7 +180,7 @@ Scripted provider 不读取生产凭据，不注册真实 adapter。自动测试
 
 ### P2：最小 loop
 
-实现 `tools.py`、`budgets.py` 和 `loop.py`，逐项完成[分阶段学习计划](./分阶段学习计划.md)的 LOOP-01–LOOP-13。
+实现 `tools.py`、`budgets.py` 和 `loop.py`，逐项完成[分阶段学习计划](./02-分阶段学习计划.md)的 LOOP-01–LOOP-13。
 
 除 LOOP-01–LOOP-13 外增加：
 
@@ -194,7 +194,7 @@ Scripted provider 不读取生产凭据，不注册真实 adapter。自动测试
 
 ### P3：RPC client
 
-实现 `rpc_models.py` 和 `rpc_client.py`，按[源码阅读与实验手册](./源码阅读与实验手册.md)的 RPC 检查表验收。
+实现 `rpc_models.py` 和 `rpc_client.py`，按[源码阅读与实验手册](./03-源码阅读与实验手册.md)的 RPC 检查表验收。
 
 至少覆盖：response/event 交错、并发 ID 关联、LF/CRLF、超时、`clear_queue → abort`、stderr 大输出、child 正常/异常退出、进程组清理、session replacement 和 pending Future 全量结算。这里的 pi 集成子进程不是普通 `pi --mode rpc`：普通 CLI 没有选择 faux provider 的参数，必须使用下一节的公开 SDK fixture 注入 faux。
 
@@ -519,4 +519,4 @@ CI 的依赖恢复使用单独、受审计的阶段，严格按 lockfile 从批�
 
 默认选择路线 A，因为它能直接复用正在学习的 pi 实现并缩小首个生产切片。路线 B 不是更“纯粹”的毕业方式，而是一项维护成本更高的架构决策；只有明确组织约束和长期所有者时再选。
 
-无论选择哪条路线，12 周课程终点都是 L1 内部只读原型与生产评审包。真实 shadow/canary、写副作用、HA 和灾备必须使用[生产化能力清单](./生产化能力清单.md)继续推进，不能把实验工程的网络隔离回归通过结果当成生产就绪证明。
+无论选择哪条路线，12 周课程终点都是 L1 内部只读原型与生产评审包。真实 shadow/canary、写副作用、HA 和灾备必须使用[生产化能力清单](./05-生产化能力清单.md)继续推进，不能把实验工程的网络隔离回归通过结果当成生产就绪证明。
